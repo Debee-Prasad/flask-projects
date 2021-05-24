@@ -1,0 +1,4 @@
+Take-Home Assignment (THA):
+create a flask web server that has 2 APIs:
+1. store string - pass a string which it will store
+2. concat strings - returns concatenated string of all strings sent till now
