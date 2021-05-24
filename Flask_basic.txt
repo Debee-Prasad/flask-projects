@@ -1,0 +1,150 @@
+Flask
+
+Web Application
+-A web application or web app is any software that runs in a web browser. It is created in a browser-supported programming language(such as the Combination of JS, HTML and CSS) and relies on a web browser to render the application
+
+Two main moving parts
+-Server
+	-several different technologies
+		- MVC
+		- PHP
+		- nodejs
+		- Python Flask
+	-works with all browser
+
+-Client
+	-Browser
+	-HTML, JS, CSS
+
+-Other Components
+-Database
+-Services
+
+What is Flask?
+- microframework for python based on Werkzeug, Jinja2 and good intentions.
+- A lightweight framework
+	-Does what it needs to do and nothing else
+-Server-side technology
+-Componentized and customizable
+	-Does just a little out of the box
+	-Components for additional functionality
+		-Database access
+		-Templates
+		-Services
+
+Why Flask?
+-Unobstrusive
+-low entry point
+-great place to learn concepts
+
+Getting Started
+-Set Up
+
+Hello,Flask
+-First app
+
+**************************************************************
+
+Client-Server Architechture
+
+-Request
+	-Information the user sent to the server
+-Response
+	-Information the server sends to the user
+
+
+Request Contents
+-URL
+	-Includes the query string
+	-"Replayable"
+		-Anyone with the URL can access the page
+
+-Header Information
+	-Sent behind the scenes
+	-No size or type restrition
+		-Forms
+		-Files
+
+Making requests
+
+GET
+	-Can only send data in URL
+	-Typically used to display forms or information
+
+POST
+	-Can send data in URL or header.
+	-Typically used to upload form data.
+
+Response Contents
+-Header information
+	-used to indicate status code, file types and other 	"behind the scenes" information
+-Content
+	-Typically HTML, CSS or JS
+
+
+
+*Routing COncepts
+The server needs to understand what the user is requesting
+-www.example.com/register
+
+This is routing
+-Translating a URL to desired item or function
+
+In Flask
+-at the end we're just calling functions
+
+What's routing
+With many web technologies, users request specific pages 
+	-www.xyz.com/register.php
+	-www.xyz.com/about.html
+
+Morder applications avoid requesting Page
+-Request functionality instead
+	-www.example.com/register
+	-www.example.com/about
+-Advantages
+	-Increased Flexibility
+	-Readable or "vanity" URLs
+	-Search Engine Optimization
+
+example:
+@app.route('/create')
+def create():
+	reture "create something!"
+
+-Sepate routes from main app.py
+
+Vanity URLs
+-Your name in lights!
+	-www.example.com/speakers/Ritesh
+-Why is this important?
+	-Search Engine Optimization
+	-Predictable URLs
+
+example
+@app.route('/question/<title>')  //between <> : placeholder
+def question(title):
+	return "hello" + title
+
+*Note: arg. used in function must be same as placeholder in route
+
+
+Create links
+To create a link a you need the URL
+Problem: The URL might change!
+from flask import flask, url_for;
+createLink = "<a href'" + url_for('create') + "'>Create a question</a>";
+
+***********************************************************
+
+
+
+
+
+
+
+
+
+
+
+
